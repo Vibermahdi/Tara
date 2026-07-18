@@ -64,71 +64,46 @@ body::before{
 .glass{
     position:relative;
     z-index:2;
-    width:80%;
-    max-width:600px;
-    padding:40px;
+    width:min(92vw,600px);
+    padding:clamp(20px,5vw,40px);
     border-radius:25px;
-
-    /* شفافیت کم تا پشت دیده شود */
-    background:rgba(255,255,255,.06);
-
-    /* افکت شیشه‌ای */
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
-    /* لبه شیشه */
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
     border:1px solid rgba(255,255,255,.25);
-
-    /* سایه ملایم */
     box-shadow:0 8px 30px rgba(0,0,0,.12);
-
     text-align:center;
     color:#111827;
 }
 
 .glass h1{
-    font-size:2.3rem;
+    font-size:clamp(1.6rem,6vw,2.3rem);
     margin-bottom:15px;
     color:#e11d48;
 }
 
 .glass p{
-    font-size:1.2rem;
-    line-height:2.2rem;
-    color:#1f2937;
+    font-size:clamp(.95rem,4vw,1.2rem);
+    line-height:1.9;
 }
 
 /* قلب */
 .heart{
-    position:absolute;
-    bottom:40px;
-    width:90px;
-    height:90px;
-
-    background:linear-gradient(45deg,#cc0000,#ff0000,#ff3333);
-
-    transform:rotate(-45deg);
-    cursor:pointer;
-    z-index:3;
-    transition:.3s;
-
-    box-shadow:0 0 10px #ff0000,
-               0 0 25px #ff0000,
-               0 0 45px rgba(255,0,0,.8);
+    width:70px;
+    height:70px;
+    bottom:120px;
+    left:50%;
+    margin-left:-35px;
 }
 
 .heart::before,
 .heart::after{
-    content:"";
-    position:absolute;
-    width:90px;
-    height:90px;
-    background:inherit;
-    border-radius:50%;
+    width:70px;
+    height:70px;
 }
 
-.heart::before{top:-45px;left:0;}
-.heart::after{left:45px;top:0;}
+.heart::before{top:-35px;}
+.heart::after{left:35px;}
 
 /* انیمیشن کلیک */
 .boom{
@@ -144,15 +119,14 @@ body::before{
 
 /* متن تولدت مبارک */
 .message{
-    position:absolute;
-    top:12%;
+    top:10%;
     left:50%;
     transform:translateX(-50%) scale(.2) rotate(-15deg);
-
-    font-size:3rem;
-    font-weight:700;
-    white-space:nowrap;
-
+    font-size:clamp(1.8rem,8vw,3rem);
+    width:90vw;
+    text-align:center;
+    white-space:normal;
+}
     /* رنگ گرادیانی */
     background:linear-gradient(90deg,#ff0000,#ff6600,#ffcc00,#ff0066,#cc00ff);
     -webkit-background-clip:text;
