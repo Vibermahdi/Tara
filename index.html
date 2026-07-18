@@ -339,7 +339,6 @@ heart.addEventListener('dblclick', () => {
         music1.play();
     }else{
         music1.pause();
-        music2.pause();
     }
 });
 
@@ -348,9 +347,6 @@ let hold;
 heart.addEventListener('mousedown',()=>{
     hold = setTimeout(()=>{
         msg.classList.add('show');
-if(music2.paused){
-    music2.currentTime = 0;
-    music2.play();
 }
     },700);
 });
