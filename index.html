@@ -203,6 +203,29 @@ body::before{
     to{opacity:0;transform:translate(var(--x),var(--y)) scale(2);}
 }
 
+@media (max-width:480px){
+    .glass{
+        width:94vw;
+        padding:18px;
+    }
+
+    .heart{
+        width:64px;
+        height:64px;
+        bottom:110px;
+        margin-left:-32px;
+    }
+
+    .heart::before,
+    .heart::after{
+        width:64px;
+        height:64px;
+    }
+
+    .heart::before{top:-32px;}
+    .heart::after{left:32px;}
+}
+
 </style>
 </head>
 
